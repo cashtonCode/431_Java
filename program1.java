@@ -60,10 +60,16 @@ public class program1
               userAmount += 1;
               arrayCounter += 1;
             }
-        } catch (java.io.FileNotFoundException e1) {e1.printStackTrace();}
+        } catch (java.io.FileNotFoundException e1) {
+          System.out.println("I could not find that file. Please check the file name and restart this program and try again.");
+          System.exit(0);
+        }
 
         for(int i = 0; i < userAmount; i++)userInputSum += userArray[i];
         break;
+
+
+
 
       case 2://console input
         try{
@@ -90,6 +96,9 @@ public class program1
         }
         for(i = 0; i < userAmount; i++)userInputSum += userArray[i];
         break;
+
+
+
 
       default://Any input that isn't (1 || 2)
         System.exit(0);
